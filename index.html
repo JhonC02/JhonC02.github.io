@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <article>
+            <div class="image">
+                <img src="./balanza.png" width="200px" />
+            </div>
+            <div class="text">
+                <h1>Bienvenido ¿deseas calcular tú IMC?</h1>
+                <h2>¿Qué es el IMC?</h2>
+                <p>El índice de masa corporal (IMC) es un número que se calcula con base en el peso y la estatura de la
+                    persona.
+                    Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y se usa para
+                    identificar
+                    las
+                    categorías de peso que pueden llevar a problemas de salud.</p>
+            </div>
+        </article>
+
+
+        <section class="grid">
+            <div class="form">
+                <div class="inputs">
+                    <div class="group">
+                        <label for="altura">Altura (m):</label>
+                        <input type="text" id="altura" name="altura" required>
+                    </div>
+
+                    <div class="group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="text" id="peso" name="peso" required>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="Mifuncion()">Calcular IMC</button>
+            </div>
+
+            <div class="resultados">
+                <p id="resultado">
+
+                </p>
+            </div>
+        </section>
+
+        <div class="cinta"></div>
+
+        <footer>
+            <h4>Jhon Silva</h4>
+            <p>CI:29.503.842</p>
+            <P>Sección:02</P>
+        </footer>
+    </main>
+</body>
+
+<script>
+    function Mifuncion() {
+        let a = parseFloat(altura.value)
+        let b = parseFloat(peso.value)
+
+        let imc = b / (a * a); // let declara una variable y le asigna un valor con =
+        let d = ' ';
+
+        if (imc < 16) { //ejemplo de condicional anidado
+            d = 'Infrapeso: Delgadez Severa';
+        } else if (16 <= imc && imc <= 16.99) {   //  && es un operador lógico equivalente a AND
+            d = 'Infrapeso: Delgadez moderada';    // en d se almacena el resultado correspondiente
+        } else if (17 <= imc && imc <= 18.49) {
+            d = 'Infrapeso: Delgadez aceptable';
+        } else if (18.50 <= imc && imc <= 24.99) {
+            d = 'Peso Normal';
+        } else if (25.00 <= imc && imc <= 29.99) {
+            d = 'Sobrepeso';
+        } else if (30.00 <= imc && imc <= 34.99) {
+            d = 'Obeso: Tipo I';
+        } else if (35.00 <= imc && imc <= 40.00) {
+            d = 'Obeso: Tipo II';
+        } else if (imc > 40.00) {
+            d = 'Obeso: Tipo III';
+        }
+
+        resultado.innerHTML = `Tu IMC es: ${imc.toFixed(2)} y tu clasificación es: ${d}`;
+    }
+</script>
+
+</html>

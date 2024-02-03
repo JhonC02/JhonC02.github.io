@@ -1,0 +1,125 @@
+html {
+    font-family: 'Roboto Slab', serif;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #BEE8F8; // linear-gradient(to top, #D4F3FF 0%, white 100%);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+article {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.text {
+    padding-top: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00425C;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #008CC4;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.btn {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #000000;
+    background-color: #368FB9;
+    padding: 10px 30px;
+    border: 2px solid #0066cc;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: 1000ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #36B964;
+    color: white;
+    border: solid 2px #0066cc;
+}
+
+.form {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    gap: .25rem;
+}
+
+input {
+    padding: .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+.resultados {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultados p {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.cinta {
+    height: 50px;
+    width: 100%;
+    background-image: url(./cinta.png);
+    background-size: contain;
+    margin: 2rem 0;
+}
+
+footer {
+    margin: 1rem 0;
+    text-align: center;
+}
